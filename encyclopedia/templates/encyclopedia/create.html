@@ -1,0 +1,42 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia - Create a new Wiki
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Add a Wiki here!</h1>
+    <div class="row">
+        <div class="col-lg-9 col-md-8">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                    <a href="{% url 'entry' title %}">&nbsp;See it for yourself</a>
+                </div>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="{% url 'create' %}" method="POST">
+                {% csrf_token %}
+                {{ form1.non_field_errors }}
+                <div class="form-group">
+                    {{ form1.Title.errors }}
+                    <label for="{{ form.Title.id_for_label }}">Title:</label>
+                    {{ form1.Title }}
+                </div>
+                <div class="form-group">
+                    {{ form1.Content.errors }}
+                    <label for="{{ form.Content.id_for_label }}">Content:</label>
+                    {{ form1.Content }}
+                </div>
+                <div class="text-right">
+                    <a href="{% url 'index' %}" class="btn btn-dark" role="button">Cancel</a>
+                    <input type="submit" value="Save" class="btn btn-primary">
+                </div>
+        </div>
+    </div>
+
+{% endblock %}

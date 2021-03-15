@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia - Search result for {{ query }}
+{% endblock %}
+
+{% block body %}
+    
+    <h1>Search results:</h1>
+    <div class="list-group list-group-flush">
+        {% for entry in entries%}
+            <a class="list-group-item list-group-item-action" href="{% url 'entry' entry %}">{{ entry }}</a>
+        {% empty %}
+            <li class="list-group-item list-group-item-action">No match was found!</li>
+        {% endfor %}
+    </div>
+
+{% endblock %}
