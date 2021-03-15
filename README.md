@@ -1,8 +1,6 @@
-# Wiki (Project 1)
+# Wiki
 
-## **CS50's Web Programming with Python and JavaScript**
-
-This is the second project under this course.It mainly focuses on designing a simple wiki with [Django](https://en.wikipedia.org/wiki/Django_(web_framework)), [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) where you can go and refer different concepts.
+This project mainly focuses on designing a simple wiki with [Django](https://en.wikipedia.org/wiki/Django_(web_framework)), [HTML](https://en.wikipedia.org/wiki/HTML) and [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) where you can go and refer different concepts.
 
 This project's source code includes 3 folders and a manage.py file which manages the whole application. Below are the **main files** under those folders.
 
